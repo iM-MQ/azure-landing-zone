@@ -1,0 +1,13 @@
+# Real secret values and environment-specific settings: never commit
+*.local.yaml
+*.local.tfvars
+.env
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+tfplan
+*.tfplan
+crash.log
