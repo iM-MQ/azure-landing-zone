@@ -84,12 +84,10 @@ See the [main README prerequisites](../README.md#prerequisites) for what to inst
 The other three follow the same pattern.
 
 ```hcl
-# Look up the Corp management group created in Lab 01
 data "azurerm_management_group" "corp" {
   name = "mg-${var.prefix}-corp"
 }
 
-# Built-in policy: Not allowed resource types
 data "azurerm_policy_definition" "not_allowed_types" {
   name = "6c112d4e-5bc7-47ae-a041-ea2d9dccd749"
 }
@@ -102,8 +100,8 @@ resource "azurerm_management_group_policy_assignment" "corp_deny_types" {
   policy_definition_id = data.azurerm_policy_definition.not_allowed_types.id
 
   parameters = jsonencode({
-    effect                        = { value = "Deny" }
     listOfResourceTypesNotAllowed = { value = var.corp_denied_resource_types }
+    effect                        = { value = "Deny" }
   })
 
   non_compliance_message {
