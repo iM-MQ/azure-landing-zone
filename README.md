@@ -9,7 +9,7 @@ These labs follow on from my [Terraform Azure Labs](https://github.com/iM-MQ/ter
 | Lab | Topic | Status |
 |---|---|---|
 | [01](lab-01-management-groups) | The management group hierarchy, in the Cloud Adoption Framework layout, with drift and deletion tests | Complete ✅ |
-| 02 | Azure Policy guardrails: allowed regions, required tags and blocked resources, assigned at management group level | Planned ⏳ |
+| [02](lab-02-policy) | Azure Policy guardrails: allowed regions, a required cost-centre tag and blocked public IPs, assigned at three levels of the hierarchy, with deny tests and a compliance review | Complete ✅ |
 | 03 | Hub-and-spoke networking: a hub VNet, spoke VNets, peering and network security groups | Planned ⏳ |
 | 04 | Platform management: central logging, activity logs, budgets and role assignments at scope | Planned ⏳ |
 
