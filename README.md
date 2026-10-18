@@ -10,7 +10,7 @@ These labs follow on from my [Terraform Azure Labs](https://github.com/iM-MQ/ter
 |---|---|---|
 | [01](lab-01-management-groups) | The management group hierarchy, in the Cloud Adoption Framework layout, with drift and deletion tests | Complete ✅ |
 | [02](lab-02-policy) | Azure Policy guardrails: allowed regions, a required cost-centre tag and blocked public IPs, assigned at three levels of the hierarchy, with deny tests and a compliance review | Complete ✅ |
-| 03 | Hub-and-spoke networking: a hub VNet, spoke VNets, peering and network security groups | Planned ⏳ |
+| [03](lab-03-hub-spoke) | Hub-and-spoke networking: a hub with Azure Firewall and Bastion, two spokes forced through the firewall by route tables, NSGs, and a scoped, time-limited policy exemption, all tested end to end | Complete ✅ |
 | 04 | Platform management: central logging, activity logs, budgets and role assignments at scope | Planned ⏳ |
 
 ## What is a landing zone?
@@ -110,4 +110,4 @@ Terraform state for every lab is kept in Azure Storage, created with the bootstr
 
 ## Cost
 
-Management groups and Azure Policy are free. Lab 03's networking is free while no traffic flows, and Lab 04's logging costs very little at lab scale. The state storage account costs pennies while it exists. Everything is removed with `terraform destroy` at the end of the project.
+Management groups and Azure Policy are free. Lab 03's Azure Firewall and Bastion cost about £1.40 an hour while running, so I destroyed that lab as soon as testing was finished; its code rebuilds it in about 10 minutes. Lab 04's logging costs very little at lab scale, and the state storage account costs pennies while it exists. Everything else is removed with `terraform destroy` at the end of the project.
