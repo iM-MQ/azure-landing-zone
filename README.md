@@ -11,7 +11,7 @@ These labs follow on from my [Terraform Azure Labs](https://github.com/iM-MQ/ter
 | [01](lab-01-management-groups) | The management group hierarchy, in the Cloud Adoption Framework layout, with drift and deletion tests | Complete ✅ |
 | [02](lab-02-policy) | Azure Policy guardrails: allowed regions, a required cost-centre tag and blocked public IPs, assigned at three levels of the hierarchy, with deny tests and a compliance review | Complete ✅ |
 | [03](lab-03-hub-spoke) | Hub-and-spoke networking: a hub with Azure Firewall and Bastion, two spokes forced through the firewall by route tables, NSGs, and a scoped, time-limited policy exemption, all tested end to end | Complete ✅ |
-| 04 | Platform management: central logging, activity logs, budgets and role assignments at scope | Planned ⏳ |
+| [04](lab-04-management) | Platform management: a central Log Analytics workspace receiving the activity log, a policy denial found with KQL, a monthly budget with alerts to the Owner role, and Reader access for an Entra ID group inherited from the top management group | Complete ✅ |
 
 ## What is a landing zone?
 
